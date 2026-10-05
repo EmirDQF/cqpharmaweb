@@ -1,0 +1,162 @@
+/* Animaciones Cinemáticas de Revelado (Reveal) */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+/* Barra de Progreso de Lectura */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(to right, #D89B2B, #E46A25);
+    width: 0%;
+    z-index: 9999;
+    transition: width 0.1s ease-out;
+}
+
+.text-gradient-gold {
+    background: linear-gradient(to right, #D89B2B, #EBB54A, #D89B2B);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Trama de Lujo (Puntos dorados sutiles) */
+.bg-grid-pattern {
+    background-image: radial-gradient(rgba(216, 155, 43, 0.15) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+/* Hover de Tarjetas de Video */
+.video-card .play-ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid rgba(216,155,43,0.5); /* Dorado */
+    animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+.video-card:hover .play-button {
+    transform: scale(1.15);
+    background-color: #E46A25; /* Naranja Vibrante */
+    color: #FFFFFF;
+    box-shadow: 0 0 20px rgba(228,106,37,0.6);
+}
+
+/* Reproducción dentro de la tarjeta (formato vertical 9:16) */
+.video-card video,
+.activation-card img {
+    display: block;
+}
+.video-card .text-overlay,
+.video-card .play-button-overlay {
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+.video-card .play-button-overlay:focus-visible {
+    outline: 3px solid #D89B2B;
+    outline-offset: -6px;
+    border-radius: 2.5rem;
+}
+.video-card.is-active {
+    cursor: auto;
+}
+.video-card.is-active .text-overlay,
+.video-card.is-active .play-button-overlay {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+/* Sin zoom durante la reproducción para no recortar los controles;
+   contain muestra completo el video horizontal (video3) */
+.video-card.is-active video {
+    object-fit: contain;
+    transform: none !important;
+}
+
+/* Demostración clínica: videos verticales silenciados en bucle */
+.clinic-card {
+    box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(216, 155, 43, 0.12);
+}
+.clinic-card video {
+    display: block;
+}
+.clinic-card .clinic-caption,
+.clinic-card .clinic-icon {
+    transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+.clinic-card:hover .clinic-icon {
+    transform: scale(1.1);
+    background-color: #E46A25;
+}
+.clinic-card .icon-pause,
+.clinic-card.is-playing .icon-play {
+    display: none;
+}
+.clinic-card.is-playing .icon-pause {
+    display: block;
+}
+/* Al reproducir, la etiqueta y el botón se atenúan; el botón vuelve con hover o foco */
+.clinic-card.is-playing .clinic-caption {
+    opacity: 0;
+    transform: translateY(8px);
+}
+.clinic-card.is-playing .clinic-icon {
+    opacity: 0;
+}
+.clinic-card.is-playing:hover .clinic-icon,
+.clinic-card .clinic-toggle:focus-visible .clinic-icon {
+    opacity: 1;
+}
+.clinic-card .clinic-toggle:focus-visible {
+    outline: 3px solid #D89B2B;
+    outline-offset: -6px;
+    border-radius: 1rem;
+}
+/* Carrusel móvil sin barra de scroll visible */
+.clinic-track {
+    scrollbar-width: none;
+}
+.clinic-track::-webkit-scrollbar {
+    display: none;
+}
+
+.blend-multiply {
+    mix-blend-mode: multiply;
+}
+
+.animation-delay-2000 { animation-delay: 2s; }
+.animation-delay-4000 { animation-delay: 4s; }
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #F5F7FA;
+}
+::-webkit-scrollbar-thumb {
+    background: #113B7A;
+    border-radius: 4px;
+}
+
+.loader {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 3px solid #FFFFFF;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

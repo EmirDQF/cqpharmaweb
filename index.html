@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CQPharma | Kolflex - Colágeno Hidrolizado Premium</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#113B7A',   // Azul Corporativo Profundo
+                            light: '#F5F7FA',  // Gris Nube
+                            gold: '#D89B2B',   // Dorado Mostaza
+                            accent: '#E46A25', // Naranja Vibrante
+                            success: '#7EAD6B',// Verde Suave
+                            surface: '#FFFFFF',// Blanco Puro
+                            text: '#2D3748',   // Gris Pizarra Oscuro
+                            gray: '#888888',
+                            whatsapp: '#25D366'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'float': 'float 4s ease-in-out infinite',
+                        'float-delayed': 'float 4s ease-in-out 2s infinite',
+                        'float-slow': 'float 6s ease-in-out 1s infinite',
+                        'shine': 'shine 2.5s linear infinite',
+                        'pulse-glow': 'pulseGlow 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'blob': 'blob 10s infinite',
+                        'pan-bg': 'panBackground 20s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-12px)' },
+                        },
+                        shine: {
+                            '0%': { backgroundPosition: '-200% center' },
+                            '100%': { backgroundPosition: '200% center' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { boxShadow: '0 0 20px rgba(216,155,43,0.3)' },
+                            '50%': { boxShadow: '0 0 40px rgba(216,155,43,0.7)' },
+                        },
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(40px, -60px) scale(1.1)' },
+                            '66%': { transform: 'translate(-30px, 30px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        panBackground: {
+                            '0%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                            '100%': { backgroundPosition: '0% 50%' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-brand-surface text-brand-text font-sans antialiased overflow-x-hidden">
+
+    <div id="scroll-progress"></div>
+
+    <nav class="fixed w-full z-50 transition-all duration-500 bg-white/90 backdrop-blur-lg border-b border-gray-100 shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="flex-shrink-0 flex items-center gap-3 cursor-pointer group">
+                    <img src="./medio/img/cqpharmalogo.png" alt="Logo CQPharma" class="h-10 sm:h-12 w-auto object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-300">
+                    <div class="h-7 w-px bg-gray-300 hidden sm:block"></div>
+                    <span class="font-serif text-xl sm:text-2xl font-bold text-brand-dark tracking-wide uppercase group-hover:text-brand-accent transition-colors duration-300">Kolflex</span>
+                </a>
+                <div class="hidden lg:flex space-x-8 items-center">
+                    <a href="#beneficios" class="text-sm font-semibold text-brand-text hover:text-brand-accent transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-accent after:transition-all after:duration-300 hover:after:w-full">Beneficios</a>
+                    <a href="#calidad" class="text-sm font-semibold text-brand-text hover:text-brand-accent transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-accent after:transition-all after:duration-300 hover:after:w-full">Calidad</a>
+                    <a href="#ingredientes" class="text-sm font-semibold text-brand-text hover:text-brand-accent transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-accent after:transition-all after:duration-300 hover:after:w-full">Fórmula</a>
+                    <a href="#asesor-ia" class="text-sm font-semibold text-brand-text hover:text-brand-accent transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-accent after:transition-all after:duration-300 hover:after:w-full">Asesor IA ✨</a>
+                    <a href="#productos" class="text-sm font-semibold text-brand-text hover:text-brand-accent transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-accent after:transition-all after:duration-300 hover:after:w-full">Productos</a>
+                    <a href="#catalogo" class="text-sm font-semibold text-brand-text hover:text-brand-accent transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-accent after:transition-all after:duration-300 hover:after:w-full">Catálogo</a>
+                    <a href="#testimonios" class="text-sm font-semibold text-brand-text hover:text-brand-accent transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-accent after:transition-all after:duration-300 hover:after:w-full">Resultados</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="#productos" class="hidden md:flex px-6 py-2.5 rounded-full bg-brand-accent text-white text-sm font-bold hover:bg-brand-dark hover:-translate-y-0.5 transition-all duration-300 shadow-[0_4px_15px_rgba(228,106,37,0.4)]">Comprar Ahora</a>
+                    <button class="lg:hidden text-brand-dark p-2 hover:text-brand-accent transition-colors z-50 relative" id="mobile-menu-btn" aria-label="Abrir menú">
+                        <i data-lucide="menu" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menú Móvil con Enlace al Catálogo -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-brand-dark/95 backdrop-blur-xl flex flex-col justify-center items-center text-center space-y-7 lg:hidden transform translate-x-full transition-transform duration-500 ease-in-out">
+        <a href="#beneficios" class="mobile-link text-2xl font-serif text-white hover:text-brand-gold transition-colors">Beneficios</a>
+        <a href="#calidad" class="mobile-link text-2xl font-serif text-white hover:text-brand-gold transition-colors">Calidad Clínica</a>
+        <a href="#ingredientes" class="mobile-link text-2xl font-serif text-white hover:text-brand-gold transition-colors">Fórmula Activa</a>
+        <a href="#asesor-ia" class="mobile-link text-2xl font-serif text-brand-gold hover:text-white transition-colors">Asesor IA ✨</a>
+        <a href="#productos" class="mobile-link text-2xl font-serif text-white hover:text-brand-gold transition-colors">Productos</a>
+        <a href="#catalogo" class="mobile-link text-2xl font-serif text-brand-gold hover:text-white transition-colors font-semibold flex items-center justify-center gap-2">
+            <i data-lucide="file-text" class="w-6 h-6"></i> Catálogo Completo
+        </a>
+        <a href="#testimonios" class="mobile-link text-2xl font-serif text-white hover:text-brand-gold transition-colors">Testimonios</a>
+        <a href="#productos" class="mobile-link mt-6 px-10 py-4 rounded-full bg-brand-accent text-white font-bold text-lg hover:bg-white hover:text-brand-dark transition-all duration-300 shadow-[0_0_25px_rgba(228,106,37,0.5)]">Ver Oferta Especial</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-16 lg:pt-36 lg:pb-28 bg-brand-dark overflow-hidden min-h-[90vh] lg:min-h-[95vh] flex items-center">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 w-full h-full bg-cover bg-[position:75%_center] md:bg-center bg-no-repeat opacity-100" style="background-image: url('./medio/img/fondo_landing.png');"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-brand-dark/95 via-brand-dark/80 to-transparent lg:bg-gradient-to-r lg:from-brand-dark lg:via-brand-dark/95 lg:to-transparent"></div> 
+        </div>
+
+        <div class="absolute top-1/4 left-10 w-6 h-6 bg-brand-gold rounded-full opacity-40 animate-float blur-[4px]"></div>
+        <div class="absolute bottom-1/4 right-20 w-8 h-8 bg-brand-accent rounded-full opacity-30 animate-float-delayed blur-[6px]"></div>
+        <div class="absolute top-1/2 right-1/3 w-4 h-4 bg-white rounded-full opacity-20 animate-float-slow blur-[2px]"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                
+                <div class="max-w-2xl reveal text-center lg:text-left mt-8 lg:mt-0">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-brand-gold text-xs font-bold uppercase tracking-widest mb-6 shadow-lg">
+                        <span class="w-2 h-2 rounded-full bg-brand-accent animate-ping"></span>
+                        Fórmula N°1 en Perú
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-serif font-semibold leading-tight drop-shadow-lg uppercase mb-2">
+                        <span class="text-gradient-gold italic">KOLFLEX.</span>
+                    </h1>
+                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-serif text-white font-semibold leading-tight mb-6 drop-shadow-lg">
+                        No dejes que el dolor <br class="hidden sm:block">
+                        <span class="text-gradient-gold italic">dicte tu edad.</span>
+                    </h1>
+                    <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-8 lg:mb-10 font-light leading-relaxed max-w-lg mx-auto lg:mx-0">
+                        Recupera tu movilidad en semanas con la fórmula avanzada de <strong class="text-white">Colágeno, Cúrcuma y Glucosamina</strong>.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 lg:gap-5 mb-10 w-full sm:w-auto">
+                        <a href="#productos" class="flex items-center justify-center w-full sm:w-auto px-8 py-4 rounded-full bg-brand-accent text-white font-bold text-lg hover:bg-brand-gold hover:text-brand-dark transition-all duration-300 shadow-[0_0_25px_rgba(228,106,37,0.5)] transform hover:-translate-y-1">
+                            Empieza tu recuperación
+                        </a>
+                        <a href="https://wa.me/51940199690?text=Hola,%20quisiera%20pedir%20Kolflex%20y%20tengo%20unas%20dudas" target="_blank" class="flex items-center justify-center w-full sm:w-auto px-8 py-4 rounded-full bg-white/5 backdrop-blur-md border border-white/20 text-white font-bold text-lg hover:bg-brand-whatsapp hover:border-brand-whatsapp transition-all duration-300 group">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp mr-2 group-hover:scale-110 transition-transform" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+                            Asesoría en línea
+                        </a>
+                    </div>
+                    
+                    <div class="flex items-center justify-center lg:justify-start gap-3 bg-white/5 backdrop-blur-md p-4 rounded-2xl w-fit mx-auto lg:mx-0 border border-white/10 shadow-lg">
+                        <div class="flex -space-x-3">
+                            <img class="w-10 h-10 rounded-full border-2 border-brand-dark object-cover" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="User">
+                            <img class="w-10 h-10 rounded-full border-2 border-brand-dark object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="User">
+                            <img class="w-10 h-10 rounded-full border-2 border-brand-dark object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop" alt="User">
+                        </div>
+                        <div>
+                            <div class="flex text-brand-gold">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                            <p class="text-white text-xs font-medium mt-0.5">4.9/5 en +10,000 clientes</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative lg:ml-auto flex justify-center lg:justify-end reveal reveal-delay-2 mt-10 lg:mt-0 w-full">
+                    <div class="relative max-w-[180px] sm:max-w-xs md:max-w-sm lg:max-w-md animate-float mx-auto lg:mx-0">
+                        <div class="absolute inset-0 bg-brand-gold/40 rounded-full blur-[60px] z-0"></div>
+                        <img src="./medio/img/kolflexpote.png" alt="Producto Kolflex" class="w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.6)] relative z-10 hover:scale-105 transition-transform duration-500">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section class="py-16 lg:py-24 bg-brand-surface relative bg-grid-pattern" id="beneficios">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-center bg-white/90 backdrop-blur-xl rounded-[2rem] lg:rounded-[2.5rem] p-6 sm:p-8 lg:p-12 border border-brand-gold/20 shadow-2xl reveal">
+                <div class="relative h-64 md:h-full min-h-[250px] lg:min-h-[350px] rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl group border border-brand-light">
+                    <div class="absolute inset-0 bg-brand-dark/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                    <img src="./medio/img/parejacorriendo.png" alt="Hombre subiendo escaleras fácilmente" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                </div>
+                <div class="flex flex-col justify-center pl-0 md:pl-6 mt-6 md:mt-0 text-center md:text-left">
+                    <span class="text-brand-accent font-bold tracking-widest uppercase text-xs sm:text-sm mb-3 block">Recupera tu vida</span>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-8 lg:mb-10 leading-tight">Siente la diferencia en cada paso.</h2>
+                    <ul class="space-y-4 sm:space-y-6 text-left">
+                        <li class="flex items-center gap-4 group cursor-default reveal reveal-delay-1">
+                            <div class="w-10 h-10 rounded-full bg-brand-light border border-brand-gold/30 shadow-md text-brand-success flex items-center justify-center flex-shrink-0 group-hover:bg-brand-success group-hover:text-white group-hover:border-transparent transition-all duration-300 transform group-hover:scale-110">
+                                <i data-lucide="check" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-base sm:text-lg text-brand-text font-medium group-hover:text-brand-dark transition-colors">Sube y baja escaleras sin dolor</span>
+                        </li>
+                        <li class="flex items-center gap-4 group cursor-default reveal reveal-delay-2">
+                            <div class="w-10 h-10 rounded-full bg-brand-light border border-brand-gold/30 shadow-md text-brand-success flex items-center justify-center flex-shrink-0 group-hover:bg-brand-success group-hover:text-white group-hover:border-transparent transition-all duration-300 transform group-hover:scale-110">
+                                <i data-lucide="check" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-lg text-brand-text font-medium group-hover:text-brand-dark transition-colors">Reduce la inflamación desde la raíz</span>
+                        </li>
+                        <li class="flex items-center gap-4 group cursor-default reveal reveal-delay-3">
+                            <div class="w-10 h-10 rounded-full bg-brand-light border border-brand-gold/30 shadow-md text-brand-success flex items-center justify-center flex-shrink-0 group-hover:bg-brand-success group-hover:text-white group-hover:border-transparent transition-all duration-300 transform group-hover:scale-110">
+                                <i data-lucide="check" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-lg text-brand-text font-medium group-hover:text-brand-dark transition-colors">Recupera la flexibilidad total</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calidad Clínica -->
+    <section class="py-16 lg:py-24 bg-brand-dark text-white relative overflow-hidden" id="calidad">
+        <div class="absolute inset-0 z-0 opacity-20">
+            <div class="absolute top-0 right-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1557672172-298e090bd0f1?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-fixed opacity-40 mix-blend-screen"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/90 to-transparent"></div>
+        </div>
+        <div class="absolute top-1/2 right-1/4 w-[40rem] h-[40rem] bg-brand-gold/20 rounded-full blur-[100px] transform -translate-y-1/2 animate-pulse-glow"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="reveal text-center lg:text-left">
+                    <span class="text-brand-gold font-bold tracking-widest uppercase text-xs sm:text-sm mb-3 flex items-center justify-center lg:justify-start gap-2">
+                        <i data-lucide="award" class="w-4 h-4"></i> Calidad Clínica
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6 lg:mb-8 leading-tight">El estándar de oro en <br class="hidden sm:block"><span class="text-gradient-gold italic">pureza natural.</span></h2>
+                    <p class="text-gray-300 text-base sm:text-lg leading-relaxed mb-8 lg:mb-10 font-light">
+                        Kolflex no es un colágeno comercial más. Es una fórmula sinérgica creada bajo los más estrictos estándares de calidad, asegurando pureza microscópica y resultados tangibles.
+                    </p>
+                    <ul class="space-y-4 sm:space-y-6 text-left max-w-md mx-auto lg:mx-0">
+                        <li class="flex items-center gap-4 sm:gap-5 group cursor-default">
+                            <div class="w-14 h-14 rounded-2xl border border-brand-gold/40 flex items-center justify-center bg-white/5 backdrop-blur-md text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-dark transition-all duration-300">
+                                <i data-lucide="leaf" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg">100% Origen Natural</h4>
+                                <p class="text-sm text-gray-400">Libre de aditivos químicos y conservantes.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-5 group cursor-default">
+                            <div class="w-14 h-14 rounded-2xl border border-brand-gold/40 flex items-center justify-center bg-white/5 backdrop-blur-md text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-dark transition-all duration-300">
+                                <i data-lucide="droplet" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Cero Azúcar y Sin Gluten</h4>
+                                <p class="text-sm text-gray-400">Fórmula segura, no altera tu peso ni genera picos de insulina.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-5 group cursor-default">
+                            <div class="w-14 h-14 rounded-2xl border border-brand-gold/40 flex items-center justify-center bg-white/5 backdrop-blur-md text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-dark transition-all duration-300">
+                                <i data-lucide="microscope" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Absorción Superior al 95%</h4>
+                                <p class="text-sm text-gray-400">Péptidos bioactivos que tu cuerpo asimila casi al instante.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative reveal reveal-delay-2 flex justify-center mt-6 lg:mt-0">
+                    <div class="relative w-full max-w-xs sm:max-w-sm md:max-w-md rounded-[2rem] lg:rounded-[2.5rem] p-3 bg-white/5 backdrop-blur-lg border border-white/20 shadow-[0_30px_60px_rgba(0,0,0,0.6)] animate-float">
+                        <img src="./medio/img/modelo_con_potev1.png" class="w-full h-auto rounded-[2rem] object-cover aspect-[4/5] opacity-90 mix-blend-screen" alt="Modelo con producto">
+                        <div class="absolute bottom-6 right-6 bg-brand-dark/80 backdrop-blur-md border border-brand-gold/50 text-white text-xs font-bold px-4 py-2 rounded-full flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-brand-success animate-pulse"></span>
+                            Alta Biodisponibilidad
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fórmula -->
+    <section class="py-16 lg:py-24 bg-brand-light" id="ingredientes">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 lg:mb-16 reveal">
+                <span class="text-brand-gold font-bold tracking-widest uppercase text-xs sm:text-sm mb-3 block">Matriz Activa</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark">Componentes Clave</h2>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8">
+                <div class="bg-white rounded-[2.5rem] p-6 text-center shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border border-brand-gold/10 reveal group overflow-hidden">
+                    <div class="overflow-hidden rounded-3xl mb-6 relative aspect-video shadow-inner">
+                        <img src="./medio/img/curcuma.png" alt="" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-accent/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-3 group-hover:text-brand-accent transition-colors">Cúrcuma Pura</h3>
+                    <p class="text-brand-text/70 leading-relaxed font-light">Antiinflamatorio natural ultrapotente. Reduce el dolor articular de manera rápida y sostenida.</p>
+                </div>
+                <div class="bg-white rounded-[2.5rem] p-6 text-center shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border border-brand-gold/10 reveal reveal-delay-1 group overflow-hidden">
+                    <div class="overflow-hidden rounded-3xl mb-6 relative aspect-video shadow-inner">
+                        <img src="./medio/img/colageno_hidrolizado.png" alt="" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-gold/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-3 group-hover:text-brand-gold transition-colors">Colágeno Hidrolizado</h3>
+                    <p class="text-brand-text/70 leading-relaxed font-light">Soporte estructural directo. Péptidos de Alta Absorción diseñados para regenerar el cartílago.</p>
+                </div>
+                <div class="bg-white rounded-[2.5rem] p-6 text-center shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border border-brand-gold/10 reveal reveal-delay-2 group overflow-hidden">
+                    <div class="overflow-hidden rounded-3xl mb-6 relative aspect-video shadow-inner">
+                        <img src="./medio/img/glucosamida.png" alt="" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-3 group-hover:text-brand-dark transition-colors">Glucosamina</h3>
+                    <p class="text-brand-text/70 leading-relaxed font-light">Lubricación y flexibilidad esencial. Previene el desgaste y roce crónico de los huesos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Asesor IA -->
+    <section class="py-16 lg:py-24 bg-brand-dark text-white relative overflow-hidden" id="asesor-ia">
+        <div class="absolute top-[-10%] right-[-5%] w-96 h-96 rounded-full bg-brand-gold/20 blur-[80px] animate-blob"></div>
+        <div class="absolute bottom-[-10%] left-[-5%] w-96 h-96 rounded-full bg-brand-accent/20 blur-[80px] animate-blob animation-delay-4000"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-10 lg:mb-12 reveal">
+                <div class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white/10 border border-brand-gold/30 text-brand-gold text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-6 shadow-lg">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i> Potenciado por IA
+                </div>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif mb-4 text-white">Descubre qué puede hacer <br class="hidden sm:block"><span class="text-gradient-gold italic">Kolflex por ti</span></h2>
+                <p class="text-gray-300 font-light text-base sm:text-lg max-w-2xl mx-auto">Ingresa tus datos y nuestra Inteligencia Artificial analizará cómo nuestra fórmula resolverá tu molestia específica en segundos.</p>
+            </div>
+
+            <div class="bg-white/10 backdrop-blur-xl border border-white/20 p-6 sm:p-8 md:p-10 rounded-[2rem] lg:rounded-[2.5rem] shadow-2xl reveal">
+                <form id="ia-form" class="space-y-6">
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div class="relative group">
+                            <label class="block text-sm font-semibold text-gray-200 mb-2 pl-1 group-focus-within:text-brand-gold transition-colors">¿Cuál es tu edad?</label>
+                            <input type="number" id="ia-age" min="18" max="100" placeholder="Ej. 45" required class="w-full bg-brand-dark/50 border border-white/20 rounded-2xl px-5 py-4 text-white placeholder-gray-400 focus:outline-none focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/50 transition-all text-lg">
+                        </div>
+                        <div class="relative group">
+                            <label class="block text-sm font-semibold text-gray-200 mb-2 pl-1 group-focus-within:text-brand-gold transition-colors">¿Qué deseas mejorar?</label>
+                            <select id="ia-goal" required class="w-full bg-brand-dark/50 border border-white/20 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/50 transition-all appearance-none text-lg cursor-pointer">
+                                <option value="" disabled selected class="text-gray-800">Selecciona tu objetivo...</option>
+                                <option value="Aliviar dolor fuerte de rodillas al caminar o subir escaleras" class="text-gray-800">Dolor en rodillas al caminar</option>
+                                <option value="Mejorar firmeza, reducir arrugas y recuperar juventud en la piel" class="text-gray-800">Rejuvenecer la piel (firmeza y arrugas)</option>
+                                <option value="Recuperación de lesiones deportivas o desgaste muscular severo" class="text-gray-800">Recuperación desgaste deportivo</option>
+                                <option value="Frenar caída de cabello excesiva y fortalecer uñas quebradizas" class="text-gray-800">Fortalecer cabello y uñas</option>
+                            </select>
+                            <i data-lucide="chevron-down" class="absolute right-5 top-[2.6rem] text-gray-400 pointer-events-none"></i>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" id="ia-submit" class="w-full py-4 sm:py-5 mt-4 rounded-2xl bg-brand-accent text-white font-bold hover:bg-brand-gold hover:text-brand-dark transition-all duration-300 shadow-[0_0_20px_rgba(228,106,37,0.4)] flex justify-center items-center gap-2 text-lg sm:text-xl transform hover:-translate-y-1">
+                        <span>Generar Diagnóstico IA ✨</span>
+                    </button>
+                </form>
+
+                <div id="ia-result-container" class="mt-10 hidden opacity-0 transition-opacity duration-500">
+                    <div class="border-t border-white/20 pt-8 relative">
+                        <div class="absolute -top-3.5 left-1/2 transform -translate-x-1/2 bg-brand-dark px-6 py-1 rounded-full border border-brand-gold/30 text-brand-gold text-xs font-bold uppercase tracking-widest shadow-lg">
+                            Resultado Personalizado
+                        </div>
+                        <div class="bg-brand-dark/60 rounded-3xl p-8 border border-brand-gold/40 relative shadow-inner">
+                            <div class="absolute -top-4 -right-4 w-12 h-12 bg-brand-gold rounded-full flex items-center justify-center shadow-lg animate-bounce">
+                                <i data-lucide="check" class="text-brand-dark w-6 h-6"></i>
+                            </div>
+                            <p id="ia-result-text" class="text-gray-100 leading-relaxed font-light text-lg"></p>
+                        </div>
+                        <div class="mt-8 text-center animate-pulse">
+                            <a href="#productos" class="inline-flex items-center gap-2 px-10 py-4 rounded-full border-2 border-brand-gold text-brand-gold font-bold hover:bg-brand-gold hover:text-brand-dark transition-all duration-300 hover:shadow-[0_0_20px_rgba(216,155,43,0.5)]">
+                                Comprar Kolflex Ahora <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- La Ciencia de la Recuperación -->
+    <section class="py-16 lg:py-24 bg-brand-surface bg-grid-pattern" id="como-funciona">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-10 lg:mb-16 reveal">La Ciencia de la Recuperación</h2>
+            
+            <div class="relative max-w-2xl mx-auto mb-12 lg:mb-20 reveal group overflow-hidden rounded-3xl lg:rounded-[2.5rem] shadow-[0_20px_40px_rgba(0,0,0,0.15)] border-4 border-white hidden sm:block">
+                <img src="./medio/img/rodilla_anatomia.png" alt="Anatomía de la rodilla" class="w-full h-64 sm:h-80 object-cover opacity-90 group-hover:scale-105 transition-transform duration-1000">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 to-transparent flex items-end justify-center pb-8">
+                    <div class="bg-white/95 backdrop-blur-md px-6 py-3 sm:px-8 sm:py-4 rounded-full shadow-xl font-bold text-brand-dark border-2 border-brand-gold/50 flex items-center gap-3 text-sm sm:text-base">
+                        <span class="w-3 h-3 bg-brand-accent rounded-full animate-ping"></span>
+                        Soporte Directo al Cartílago
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8 relative">
+                <div class="hidden md:block absolute top-24 left-1/6 right-1/6 w-2/3 h-1 bg-gradient-to-r from-brand-light via-brand-gold/50 to-brand-light -z-10 mx-auto"></div>
+                
+                <div class="bg-white p-6 lg:p-8 rounded-[2rem] shadow-lg border border-brand-gold/10 hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 reveal">
+                    <div class="w-full h-40 overflow-hidden rounded-2xl mb-6 relative">
+                        <img src="./medio/img/dia1.png" class="w-full h-full object-cover">
+                    </div>
+                    <span class="inline-block px-5 py-2 bg-brand-dark text-brand-gold text-sm font-bold rounded-full mb-4 shadow-md">Día 1 a 7</span>
+                    <h4 class="text-xl font-bold text-brand-dark mb-2">Desinflamación</h4>
+                    <p class="text-gray-500 text-sm">La cúrcuma actúa rápidamente bajando la hinchazón.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-[2rem] shadow-lg border border-brand-gold/10 hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 reveal reveal-delay-1">
+                    <div class="w-full h-40 overflow-hidden rounded-2xl mb-6 relative">
+                        <img src="./medio/img/dia15.png" class="w-full h-full object-cover">
+                    </div>
+                    <span class="inline-block px-5 py-2 bg-brand-dark text-brand-gold text-sm font-bold rounded-full mb-4 shadow-md">Día 15</span>
+                    <h4 class="text-xl font-bold text-brand-dark mb-2">Movilidad</h4>
+                    <p class="text-gray-500 text-sm">La glucosamina lubrica las articulaciones para evitar roces.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-[2rem] shadow-lg border border-brand-gold/10 hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 reveal reveal-delay-2">
+                    <div class="w-full h-40 overflow-hidden rounded-2xl mb-6 relative">
+                        <img src="./medio/img/dia30.png" class="w-full h-full object-cover">
+                    </div>
+                    <span class="inline-block px-5 py-2 bg-brand-dark text-brand-gold text-sm font-bold rounded-full mb-4 shadow-md">Día 30+</span>
+                    <h4 class="text-xl font-bold text-brand-dark mb-2">Regeneración</h4>
+                    <p class="text-gray-500 text-sm">El colágeno comienza a reconstruir los tejidos desgastados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="py-16 lg:py-24 bg-brand-dark relative overflow-hidden" id="testimonios">
+        <div class="absolute inset-0 z-0 opacity-20">
+             <div class="absolute top-0 right-1/4 w-[500px] h-[500px] bg-brand-gold rounded-full blur-[150px] animate-blob"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-center text-white mb-10 lg:mb-16 reveal">Historias Reales de Movilidad</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-6">
+                <!-- Testimonio 1 -->
+                <div class="video-card relative w-full max-w-sm mx-auto sm:max-w-none rounded-[2.5rem] overflow-hidden aspect-[9/16] bg-black cursor-pointer reveal group border border-white/10 shadow-2xl">
+                    <video class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" width="478" height="850"
+                           playsinline controls preload="metadata" poster="./medio/img/posters/testimonio1.jpg"
+                           aria-label="Testimonio en video de Jorge M.">
+                        <source src="./medio/video/testimonio1.mp4" type="video/mp4">
+                        Tu navegador no soporta video HTML5.
+                    </video>
+                    <div class="text-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent pointer-events-none"></div>
+                    <button type="button" class="play-button-overlay absolute inset-0 w-full flex items-center justify-center" aria-label="Reproducir testimonio de Jorge M.">
+                        <span class="play-button w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white transition-all duration-300 relative group-hover:scale-110 group-hover:bg-brand-accent">
+                            <span class="play-ring absolute inset-0 border-2 border-white/50 rounded-full animate-ping"></span>
+                            <i data-lucide="play" class="w-8 h-8 ml-1 fill-current z-10"></i>
+                        </span>
+                    </button>
+                    <div class="text-overlay absolute bottom-0 left-0 right-0 p-6 pointer-events-none transform group-hover:-translate-y-2 transition-transform duration-300">
+                        <p class="text-white text-sm font-medium italic mb-3 leading-relaxed">"El dolor disminuyó progresivamente y recuperé mi movilidad día a día."</p>
+                        <div class="flex items-center gap-3 border-t border-white/20 pt-3">
+                            <div class="w-10 h-10 rounded-full bg-brand-gold flex items-center justify-center text-sm font-bold text-brand-dark">J</div>
+                            <span class="text-gray-200 text-xs font-semibold">Jorge M.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 1 -->
+                <div class="video-card relative w-full max-w-sm mx-auto sm:max-w-none rounded-[2.5rem] overflow-hidden aspect-[9/16] bg-black cursor-pointer reveal reveal-delay-1 group border border-white/10 shadow-2xl">
+                    <video class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" width="478" height="850"
+                           playsinline controls preload="metadata" poster="./medio/img/posters/video1.jpg"
+                           aria-label="Testimonio en video de Ana M.">
+                        <source src="./medio/video/video1.mp4" type="video/mp4">
+                        Tu navegador no soporta video HTML5.
+                    </video>
+                    <div class="text-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent pointer-events-none"></div>
+                    <button type="button" class="play-button-overlay absolute inset-0 w-full flex items-center justify-center" aria-label="Reproducir testimonio de Ana M.">
+                        <span class="play-button w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white transition-all duration-300 relative group-hover:scale-110 group-hover:bg-brand-accent">
+                            <span class="play-ring absolute inset-0 border-2 border-white/50 rounded-full animate-ping"></span>
+                            <i data-lucide="play" class="w-8 h-8 ml-1 fill-current z-10"></i>
+                        </span>
+                    </button>
+                    <div class="text-overlay absolute bottom-0 left-0 right-0 p-6 pointer-events-none transform group-hover:-translate-y-2 transition-transform duration-300">
+                        <p class="text-white text-sm font-medium italic mb-3 leading-relaxed">"Sufría de dolor en las rodillas. Ahora gracias a Kolflex, me siento mejor."</p>
+                        <div class="flex items-center gap-3 border-t border-white/20 pt-3">
+                            <div class="w-10 h-10 rounded-full bg-brand-gold flex items-center justify-center text-sm font-bold text-brand-dark">A</div>
+                            <span class="text-gray-200 text-xs font-semibold">Ana M.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="video-card relative w-full max-w-sm mx-auto sm:max-w-none rounded-[2.5rem] overflow-hidden aspect-[9/16] bg-black cursor-pointer reveal reveal-delay-2 group border border-white/10 shadow-2xl">
+                    <video class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" width="478" height="850"
+                           playsinline controls preload="metadata" poster="./medio/img/posters/video2.jpg"
+                           aria-label="Testimonio en video de Carmen R.">
+                        <source src="./medio/video/video2.mp4" type="video/mp4">
+                        Tu navegador no soporta video HTML5.
+                    </video>
+                    <div class="text-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent pointer-events-none"></div>
+                    <button type="button" class="play-button-overlay absolute inset-0 w-full flex items-center justify-center" aria-label="Reproducir testimonio de Carmen R.">
+                        <span class="play-button w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white transition-all duration-300 relative group-hover:scale-110 group-hover:bg-brand-accent">
+                            <span class="play-ring absolute inset-0 border-2 border-white/50 rounded-full animate-ping"></span>
+                            <i data-lucide="play" class="w-8 h-8 ml-1 fill-current z-10"></i>
+                        </span>
+                    </button>
+                    <div class="text-overlay absolute bottom-0 left-0 right-0 p-6 pointer-events-none transform group-hover:-translate-y-2 transition-transform duration-300">
+                        <p class="text-white text-sm font-medium italic mb-3 leading-relaxed">"No creía mucho en esto, pero Kolflex me sorprendió positivamente."</p>
+                        <div class="flex items-center gap-3 border-t border-white/20 pt-3">
+                            <div class="w-12 h-12 rounded-full bg-brand-gold flex items-center justify-center text-sm font-bold text-brand-dark">C</div>
+                            <span class="text-gray-200 text-xs font-semibold">Carmen R.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="video-card relative w-full max-w-sm mx-auto sm:max-w-none rounded-[2.5rem] overflow-hidden aspect-[9/16] bg-black cursor-pointer reveal reveal-delay-3 group border border-white/10 shadow-2xl">
+                    <video class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" width="478" height="850"
+                           playsinline controls preload="metadata" poster="./medio/img/posters/video3.jpg"
+                           aria-label="Testimonio en video de Lucía P.">
+                        <source src="./medio/video/video3.mp4" type="video/mp4">
+                        Tu navegador no soporta video HTML5.
+                    </video>
+                    <div class="text-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent pointer-events-none"></div>
+                    <button type="button" class="play-button-overlay absolute inset-0 w-full flex items-center justify-center" aria-label="Reproducir testimonio de Lucía P.">
+                        <span class="play-button w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white transition-all duration-300 relative group-hover:scale-110 group-hover:bg-brand-accent">
+                            <span class="play-ring absolute inset-0 border-2 border-white/50 rounded-full animate-ping"></span>
+                            <i data-lucide="play" class="w-8 h-8 ml-1 fill-current z-10"></i>
+                        </span>
+                    </button>
+                    <div class="text-overlay absolute bottom-0 left-0 right-0 p-6 pointer-events-none transform group-hover:-translate-y-2 transition-transform duration-300">
+                        <p class="text-white text-sm font-medium italic mb-3 leading-relaxed">"Me encanta tomarlo todas las mañanas, el alivio es real y duradero."</p>
+                        <div class="flex items-center gap-3 border-t border-white/20 pt-3">
+                            <div class="w-10 h-10 rounded-full bg-brand-gold flex items-center justify-center text-sm font-bold text-brand-dark">L</div>
+                            <span class="text-gray-200 text-xs font-semibold">Lucía P.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activación en punto de venta -->
+            <div class="mt-12 lg:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <figure class="activation-card relative w-full max-w-sm mx-auto sm:max-w-none m-0 rounded-[2.5rem] overflow-hidden aspect-[4/5] bg-black reveal group border border-white/10 shadow-2xl">
+                    <img src="./medio/img/modelo1.jpeg" width="1088" height="1445" loading="lazy" decoding="async"
+                         class="w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-105"
+                         alt="Dos asesoras de CQPharma sonríen junto a un stand de Kolflex mostrando el frasco del producto.">
+                    <figcaption class="absolute bottom-0 left-0 right-0 px-6 pt-12 pb-5 bg-gradient-to-t from-black/90 via-black/40 to-transparent text-white text-sm font-semibold">Stand de asesoría Kolflex</figcaption>
+                </figure>
+                <figure class="activation-card relative w-full max-w-sm mx-auto sm:max-w-none m-0 rounded-[2.5rem] overflow-hidden aspect-[4/5] bg-black reveal reveal-delay-1 group border border-white/10 shadow-2xl">
+                    <img src="./medio/img/modelo2.jpeg" width="1287" height="1600" loading="lazy" decoding="async"
+                         class="w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-105"
+                         alt="Afiche de Kolflex Colágeno Hidrolizado con sus ingredientes: cúrcuma, magnesio, vitamina C, glucosamina y condroitina.">
+                    <figcaption class="absolute bottom-0 left-0 right-0 px-6 pt-12 pb-5 bg-gradient-to-t from-black/90 via-black/40 to-transparent text-white text-sm font-semibold">Fórmula regeneradora Kolflex</figcaption>
+                </figure>
+                <figure class="activation-card relative w-full max-w-sm mx-auto sm:max-w-none m-0 rounded-[2.5rem] overflow-hidden aspect-[4/5] bg-black reveal reveal-delay-2 group border border-white/10 shadow-2xl">
+                    <img src="./medio/img/modelo3.jpeg" width="1200" height="1600" loading="lazy" decoding="async"
+                         class="w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-105"
+                         alt="Asesora de CQPharma sostiene un frasco de Kolflex detrás de un mostrador con la línea de productos.">
+                    <figcaption class="absolute bottom-0 left-0 right-0 px-6 pt-12 pb-5 bg-gradient-to-t from-black/90 via-black/40 to-transparent text-white text-sm font-semibold">Línea completa CQPharma</figcaption>
+                </figure>
+            </div>
+
+            <div class="mt-12 lg:mt-16 flex flex-wrap justify-center gap-6 reveal">
+                <div class="flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-brand-gold/30 px-6 py-3 lg:px-8 lg:py-4 rounded-full text-brand-gold shadow-xl">
+                    <i data-lucide="shield-check" class="w-5 h-5 lg:w-6 lg:h-6"></i>
+                    <span class="font-bold text-base lg:text-lg tracking-wide uppercase">Respaldado por médicos</span>
+                </div>
+            </div>
+
+            <!-- Demostración clínica: videos verticales 9:16 (carrusel en móvil, 3 columnas desde sm) -->
+            <div id="demostracion-clinica" class="mt-10 lg:mt-12 max-w-5xl mx-auto">
+                <div class="text-center mb-8 lg:mb-10 reveal">
+                    <h3 class="text-2xl sm:text-3xl font-serif text-white">Demostración Clínica</h3>
+                    <p class="text-gray-300 text-sm sm:text-base mt-2">Especialistas y centros médicos que acompañan el cuidado de tus articulaciones.</p>
+                </div>
+
+                <div class="clinic-track flex sm:grid sm:grid-cols-3 gap-4 lg:gap-6 overflow-x-auto sm:overflow-visible snap-x snap-mandatory -mx-4 px-4 sm:mx-0 sm:px-0 pb-2 sm:pb-0">
+                    <!-- Clínico 1 -->
+                    <article class="clinic-card relative shrink-0 w-[78%] sm:w-auto snap-center rounded-2xl overflow-hidden aspect-[9/16] bg-black border border-white/10 reveal">
+                        <video class="w-full h-full object-cover" width="478" height="850"
+                               playsinline muted loop preload="metadata" poster="./medio/img/posters/ejemplo3.jpg"
+                               aria-label="Médico reumatólogo explica la evaluación de rodilla con un modelo articular y radiografías">
+                            <source src="./medio/video/ejemplo3.mp4" type="video/mp4">
+                            Tu navegador no soporta video HTML5.
+                        </video>
+                        <div class="clinic-caption absolute bottom-0 left-0 right-0 px-5 pt-16 pb-5 bg-gradient-to-t from-black/90 via-black/50 to-transparent pointer-events-none">
+                            <span class="text-brand-gold text-[11px] font-bold tracking-widest uppercase">Reumatología</span>
+                            <h4 class="text-white font-bold text-base leading-snug mt-1">Evaluación y Tratamiento Articular</h4>
+                        </div>
+                        <button type="button" class="clinic-toggle absolute inset-0 w-full flex items-center justify-center" aria-label="Reproducir video: Evaluación y Tratamiento Articular">
+                            <span class="clinic-icon w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white">
+                                <span class="icon-play"><i data-lucide="play" class="w-7 h-7 ml-1 fill-current"></i></span>
+                                <span class="icon-pause"><i data-lucide="pause" class="w-7 h-7 fill-current"></i></span>
+                            </span>
+                        </button>
+                    </article>
+
+                    <!-- Clínico 2 -->
+                    <article class="clinic-card relative shrink-0 w-[78%] sm:w-auto snap-center rounded-2xl overflow-hidden aspect-[9/16] bg-black border border-white/10 reveal reveal-delay-1">
+                        <video class="w-full h-full object-cover" width="478" height="850"
+                               playsinline muted loop preload="metadata" poster="./medio/img/posters/ejemplo2.jpg"
+                               aria-label="Explicación clínica de la artritis reumatoide con imágenes de manos antes y después">
+                            <source src="./medio/video/ejemplo2.mp4" type="video/mp4">
+                            Tu navegador no soporta video HTML5.
+                        </video>
+                        <div class="clinic-caption absolute bottom-0 left-0 right-0 px-5 pt-16 pb-5 bg-gradient-to-t from-black/90 via-black/50 to-transparent pointer-events-none">
+                            <span class="text-brand-gold text-[11px] font-bold tracking-widest uppercase">Artritis reumatoide</span>
+                            <h4 class="text-white font-bold text-base leading-snug mt-1">Explicación Clínica</h4>
+                        </div>
+                        <button type="button" class="clinic-toggle absolute inset-0 w-full flex items-center justify-center" aria-label="Reproducir video: Explicación Clínica">
+                            <span class="clinic-icon w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white">
+                                <span class="icon-play"><i data-lucide="play" class="w-7 h-7 ml-1 fill-current"></i></span>
+                                <span class="icon-pause"><i data-lucide="pause" class="w-7 h-7 fill-current"></i></span>
+                            </span>
+                        </button>
+                    </article>
+
+                    <!-- Clínico 3 -->
+                    <article class="clinic-card relative shrink-0 w-[78%] sm:w-auto snap-center rounded-2xl overflow-hidden aspect-[9/16] bg-black border border-white/10 reveal reveal-delay-2">
+                        <video class="w-full h-full object-cover" width="478" height="850"
+                               playsinline muted loop preload="metadata" poster="./medio/img/posters/ejemplo1.jpg"
+                               aria-label="Paciente recibe un examen de densitometría ósea en un centro médico">
+                            <source src="./medio/video/ejemplo1.mp4" type="video/mp4">
+                            Tu navegador no soporta video HTML5.
+                        </video>
+                        <div class="clinic-caption absolute bottom-0 left-0 right-0 px-5 pt-16 pb-5 bg-gradient-to-t from-black/90 via-black/50 to-transparent pointer-events-none">
+                            <span class="text-brand-gold text-[11px] font-bold tracking-widest uppercase">Densitometría ósea</span>
+                            <h4 class="text-white font-bold text-base leading-snug mt-1">Sedes y Atención Médica</h4>
+                        </div>
+                        <button type="button" class="clinic-toggle absolute inset-0 w-full flex items-center justify-center" aria-label="Reproducir video: Sedes y Atención Médica">
+                            <span class="clinic-icon w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white">
+                                <span class="icon-play"><i data-lucide="play" class="w-7 h-7 ml-1 fill-current"></i></span>
+                                <span class="icon-pause"><i data-lucide="pause" class="w-7 h-7 fill-current"></i></span>
+                            </span>
+                        </button>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Productos y Ofertas -->
+    <section class="py-16 lg:py-24 bg-brand-light relative" id="productos">
+        <div class="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-brand-surface to-transparent"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12 lg:mb-16 reveal">
+                <span class="bg-brand-success/10 border border-brand-success/30 text-brand-success font-bold text-xs sm:text-sm px-4 sm:px-6 py-2 rounded-full inline-flex items-center gap-2 mb-4 sm:mb-6 shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-brand-success animate-ping"></span> Stock Inmediato
+                </span>
+                <span class="text-brand-gold font-bold tracking-widest uppercase text-xs sm:text-sm mb-2 block">Nuestros Planes</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark">Productos y Ofertas Exclusivas</h2>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-end pb-10">
+                
+                <!-- 1 Frasco -->
+                <div class="bg-white rounded-3xl lg:rounded-[2.5rem] p-6 lg:p-8 border border-gray-200 text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 lg:hover:-translate-y-3 transition-all duration-500 group reveal">
+                    <h3 class="text-2xl font-bold text-brand-dark mb-1 group-hover:text-brand-accent transition-colors">1 Frasco</h3>
+                    <p class="text-gray-400 text-sm mb-8 uppercase tracking-widest font-semibold">Tratamiento Base</p>
+                    
+                    <div class="h-40 flex items-center justify-center mb-8 relative">
+                        <img src="./medio/img/kolflexpote.png" alt="1 Frasco Kolflex" class="h-full object-contain drop-shadow-md group-hover:scale-110 transition-transform duration-500 relative z-10">
+                        <div class="absolute inset-0 bg-brand-gold/10 rounded-full blur-2xl group-hover:bg-brand-gold/20 transition-colors z-0"></div>
+                    </div>
+                    
+                    <div class="text-5xl font-serif font-bold text-brand-dark mb-8">S/ 215 <span class="text-base font-sans text-gray-400 font-normal">Soles</span></div>
+                    
+                    <a href="https://wa.me/51940199690?text=Hola,%20quiero%20comprar%20el%20paquete%20de%201%20frasco%20de%20Kolflex%20(S/%20215)" target="_blank" class="group relative block w-full py-3 lg:py-4 rounded-full border-2 border-brand-accent text-brand-accent font-bold hover:bg-brand-accent hover:text-white transition-all duration-300 text-base lg:text-lg">
+                        <div class="flex items-center justify-center gap-2 w-full">
+                            <i data-lucide="shopping-bag" class="w-4 h-4 lg:w-5 lg:h-5"></i>
+                            <span>Pedir 1 Frasco</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 3 Frascos -->
+                <div class="bg-white rounded-3xl lg:rounded-[2.5rem] p-8 lg:p-10 border-4 border-brand-gold text-center relative transform lg:-translate-y-6 reveal animate-pulse-glow z-20 shadow-2xl order-first sm:order-none col-span-1 sm:col-span-2 lg:col-span-1 mx-auto w-full sm:w-3/4 lg:w-full" style="transition-delay: 0.1s;">
+                    <div class="absolute -top-4 lg:-top-5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-brand-accent via-[#ff8c4a] to-brand-accent overflow-hidden text-white font-bold uppercase tracking-widest text-xs lg:text-sm px-6 py-2 lg:px-8 lg:py-2.5 rounded-full shadow-lg w-max">
+                        <div class="absolute inset-0 bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent)] bg-[length:200%_100%] animate-shine"></div>
+                        <span class="relative z-10 flex items-center gap-2"><i data-lucide="flame" class="w-3 h-3 lg:w-4 lg:h-4"></i> Más Vendido</span>
+                    </div>
+                    
+                    <h3 class="text-2xl lg:text-3xl font-bold text-brand-dark mb-1 mt-4">3 Frascos</h3>
+                    <p class="text-gray-400 text-xs lg:text-sm mb-6 lg:mb-8 uppercase tracking-widest font-semibold">Tratamiento Completo</p>
+                    
+                    <div class="h-32 lg:h-40 flex justify-center items-center mb-6 lg:mb-8 relative animate-float">
+                        <div class="absolute inset-0 bg-brand-gold/20 rounded-full blur-3xl z-0"></div>
+                        <img src="./medio/img/kolflexpote.png" alt="Kolflex" class="h-24 lg:h-32 object-contain absolute -ml-14 lg:-ml-20 drop-shadow-lg z-10 hover:scale-110 transition-transform cursor-pointer mt-3">
+                        <img src="./medio/img/kolflexpote.png" alt="Kolflex" class="h-24 lg:h-32 object-contain absolute -mr-14 lg:-mr-20 drop-shadow-lg z-10 hover:scale-110 transition-transform cursor-pointer mt-3">
+                        <img src="./medio/img/kolflexpote.png" alt="Kolflex" class="h-32 lg:h-40 object-contain absolute drop-shadow-2xl z-20 hover:scale-110 transition-transform cursor-pointer">
+                    </div>
+                    
+                    <div class="inline-block bg-brand-gold/20 border border-brand-gold/50 text-brand-dark font-extrabold text-xs lg:text-sm px-4 lg:px-5 py-1 lg:py-1.5 rounded-full mb-4 shadow-sm">Ahorras 16%</div>
+                    
+                    <div class="text-5xl lg:text-6xl font-serif font-bold text-brand-dark mb-2">S/ 585</div>
+                    <p class="text-brand-accent font-bold text-sm lg:text-base mb-6 lg:mb-8">Ahorro de S/ 60</p>
+                    
+                    <a href="https://wa.me/51940199690?text=Hola,%20quiero%20aprovechar%20la%20oferta%20destacada%20de%203%20frascos%20de%20Kolflex%20(S/%20585)" target="_blank" class="group relative block w-full py-4 lg:py-5 rounded-full bg-brand-accent text-white font-bold hover:bg-brand-dark transition-all duration-300 shadow-[0_10px_30px_rgba(228,106,37,0.4)] hover:shadow-[0_10px_30px_rgba(17,59,122,0.5)] hover:-translate-y-1 text-lg lg:text-xl overflow-hidden">
+                        <div class="absolute inset-0 bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent)] bg-[length:200%_100%] animate-shine hidden group-hover:block"></div>
+                        <div class="relative z-10 flex items-center justify-center gap-2 lg:gap-3 w-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-whatsapp relative z-10 shrink-0" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+                            <span class="relative z-10 text-center">Pedir Ya por WhatsApp</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 6 Frascos -->
+                <div class="bg-white rounded-3xl lg:rounded-[2.5rem] p-6 lg:p-8 border border-gray-200 text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 lg:hover:-translate-y-3 transition-all duration-500 group reveal" style="transition-delay: 0.2s;">
+                    <h3 class="text-2xl font-bold text-brand-dark mb-1 group-hover:text-brand-accent transition-colors">6 Frascos</h3>
+                    <p class="text-gray-400 text-sm mb-8 uppercase tracking-widest font-semibold">Máximo Ahorro</p>
+                    
+                    <div class="h-40 flex justify-center items-center mb-8 relative group-hover:scale-105 transition-transform duration-500 mt-4">
+                        <div class="absolute inset-0 bg-brand-dark/5 rounded-full blur-2xl z-0"></div>
+                        <img src="./medio/img/kolflexpote.png" alt="Kolflex" class="h-20 lg:h-24 object-contain absolute -ml-20 lg:-ml-28 -mt-6 lg:-mt-8 drop-shadow-md z-0">
+                        <img src="./medio/img/kolflexpote.png" alt="Kolflex" class="h-20 lg:h-24 object-contain absolute -mr-20 lg:-mr-28 -mt-6 lg:-mt-8 drop-shadow-md z-0">
+                        <img src="./medio/img/kolflexpote.png" alt="Kolflex" class="h-20 lg:h-24 object-contain absolute -mt-10 lg:-mt-12 drop-shadow-md z-0">
+                        <img src="./medio/img/kolflexpote.png" alt="Kolflex" class="h-24 lg:h-28 object-contain absolute -ml-12 lg:-ml-16 drop-shadow-lg z-10 mt-6 lg:mt-8">
+                        <img src="./medio/img/kolflexpote.png" alt="Kolflex" class="h-24 lg:h-28 object-contain absolute -mr-12 lg:-mr-16 drop-shadow-lg z-10 mt-6 lg:mt-8">
+                        <img src="./medio/img/kolflexpote.png" alt="Kolflex" class="h-28 lg:h-32 object-contain absolute drop-shadow-2xl z-20 mt-4 lg:mt-6">
+                    </div>
+
+                    <div class="text-5xl font-serif font-bold text-brand-dark mb-8">S/ 1140 <span class="text-base font-sans text-gray-400 font-normal">Soles</span></div>
+
+                    <a href="https://wa.me/51940199690?text=Hola,%20quiero%20el%20paquete%20de%20máximo%20ahorro%20de%206%20frascos%20de%20Kolflex%20(S/%201140)" target="_blank" class="group relative block w-full py-3 lg:py-4 rounded-full border-2 border-brand-accent text-brand-accent font-bold hover:bg-brand-accent hover:text-white transition-all duration-300 text-base lg:text-lg">
+                        <div class="flex items-center justify-center gap-2 w-full">
+                            <i data-lucide="shopping-bag" class="w-4 h-4 lg:w-5 lg:h-5"></i>
+                            <span>Pedir 6 Frascos</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bloque Destacado: JOYFLEXONE -->
+            <div class="mt-14 max-w-5xl mx-auto bg-white rounded-3xl lg:rounded-[2.5rem] p-4 sm:p-6 lg:p-8 shadow-2xl border border-brand-gold/30 reveal overflow-hidden">
+                <div class="text-center mb-6">
+                    <span class="text-brand-accent font-bold tracking-widest uppercase text-xs sm:text-sm mb-1 block">Tratamiento Médico Avanzado</span>
+                    <h3 class="text-2xl sm:text-3xl font-serif font-bold text-brand-dark">Viscosuplementación con Ácido Hialurónico</h3>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md border border-gray-100">
+                    <img src="./medio/img/joyflexone.png" alt="Ficha técnica e información de Joyflexone - Viscosuplementación con Ácido Hialurónico" class="w-full h-auto object-contain mx-auto">
+                </div>
+                <div class="mt-6 text-center">
+                    <a href="https://wa.me/51940199690?text=Hola,%20deseo%20más%20información%20y%20precios%20de%20Joyflexone" target="_blank" class="inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-full bg-brand-dark text-brand-gold font-bold text-base hover:bg-brand-accent hover:text-white transition-all duration-300 shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp shrink-0" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+                        <span>Consultar por Joyflexone</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center reveal">
+                <p class="text-xs sm:text-sm font-semibold text-brand-dark flex flex-col sm:flex-row items-center justify-center gap-2 bg-white/80 backdrop-blur-md inline-flex px-6 sm:px-8 py-3 sm:py-4 rounded-2xl sm:rounded-full shadow-lg border border-brand-gold/20">
+                    <i data-lucide="shield-check" class="w-5 h-5 text-brand-success"></i> Pago Seguro & Envíos a todo el Perú
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo de Productos y Suplementos Adicionales -->
+    <section class="py-16 lg:py-24 bg-brand-surface relative border-t border-gray-200" id="otros-productos">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12 lg:mb-16 reveal">
+                <span class="bg-brand-whatsapp/10 border border-brand-whatsapp/30 text-[#128C7E] font-bold text-xs sm:text-sm px-5 py-2 rounded-full inline-flex items-center gap-2 mb-4 shadow-sm">
+                    <i data-lucide="truck" class="w-4 h-4 text-brand-whatsapp"></i> Delivery Inmediato a Todo el Perú
+                </span>
+                <span class="text-brand-gold font-bold tracking-widest uppercase text-xs sm:text-sm mb-2 block">Línea Farmacéutica CQPharma</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-4">Productos Disponibles</h2>
+                <p class="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto">Selecciona tu suplemento favorito y recíbelo cómodamente en tu domicilio. Pídelo directo al WhatsApp oficial.</p>
+            </div>
+
+            <!-- Grilla Responsiva para Móviles y Escritorio -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 items-stretch">
+                
+                <!-- 1. VITAMINA C POTE -->
+                <div class="bg-white rounded-3xl p-4 sm:p-5 border border-gray-200 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-2 reveal">
+                    <div>
+                        <div class="overflow-hidden rounded-2xl bg-[#fafafa] border border-gray-100 p-2 mb-4 relative flex items-center justify-center">
+                            <img src="./medio/img/VITAMINACPOTE.jpg" alt="VITA C Pote CQPharma" class="w-full h-auto object-contain rounded-xl group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        </div>
+                        <div class="text-center mb-5">
+                            <span class="inline-block px-3 py-1 bg-amber-50 border border-amber-200 text-amber-800 text-[11px] font-bold uppercase rounded-full mb-2">Antioxidante & Inmunidad</span>
+                            <h3 class="font-bold text-lg sm:text-xl text-brand-dark mb-1 group-hover:text-brand-accent transition-colors">VITA C (Pote)</h3>
+                            <p class="text-xs sm:text-sm text-gray-500 font-light">Refuerzo diario de Vitamina C de máxima pureza para elevar defensas.</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/51940199690?text=Hola,%20deseo%20llevar%20el%20producto%20VITA%20C%20(Pote).%20¿Hacen%20delivery?" target="_blank" class="w-full py-3.5 px-3 rounded-2xl sm:rounded-full bg-brand-whatsapp hover:bg-[#1eb956] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(37,211,102,0.35)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.5)] transition-all duration-300 transform active:scale-95 text-center leading-tight">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp shrink-0" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+                        <span>Deseo llevar el producto ¿hacen delivery?</span>
+                    </a>
+                </div>
+
+                <!-- 2. ZINC COMPLEX -->
+                <div class="bg-white rounded-3xl p-4 sm:p-5 border border-gray-200 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-2 reveal" style="transition-delay: 0.1s;">
+                    <div>
+                        <div class="overflow-hidden rounded-2xl bg-[#fafafa] border border-gray-100 p-2 mb-4 relative flex items-center justify-center">
+                            <img src="./medio/img/ZINCCOMPLEX.jpg" alt="ZINC COMPLEX CQPharma" class="w-full h-auto object-contain rounded-xl group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        </div>
+                        <div class="text-center mb-5">
+                            <span class="inline-block px-3 py-1 bg-purple-50 border border-purple-200 text-purple-800 text-[11px] font-bold uppercase rounded-full mb-2">Defensas & Regeneración</span>
+                            <h3 class="font-bold text-lg sm:text-xl text-brand-dark mb-1 group-hover:text-brand-accent transition-colors">Zinc Complex (Zn)</h3>
+                            <p class="text-xs sm:text-sm text-gray-500 font-light">Nutrición esencial para el sistema inmunológico, cabello y piel.</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/51940199690?text=Hola,%20deseo%20llevar%20el%20producto%20Zinc%20Complex.%20¿Hacen%20delivery?" target="_blank" class="w-full py-3.5 px-3 rounded-2xl sm:rounded-full bg-brand-whatsapp hover:bg-[#1eb956] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(37,211,102,0.35)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.5)] transition-all duration-300 transform active:scale-95 text-center leading-tight">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp shrink-0" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+                        <span>Deseo llevar el producto ¿hacen delivery?</span>
+                    </a>
+                </div>
+
+                <!-- 3. VITAMINA C COMPLEX -->
+                <div class="bg-white rounded-3xl p-4 sm:p-5 border border-gray-200 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-2 reveal" style="transition-delay: 0.2s;">
+                    <div>
+                        <div class="overflow-hidden rounded-2xl bg-[#fafafa] border border-gray-100 p-2 mb-4 relative flex items-center justify-center">
+                            <img src="./medio/img/VITAMINAC.jpeg" alt="VITA C COMPLEX CQPharma" class="w-full h-auto object-contain rounded-xl group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        </div>
+                        <div class="text-center mb-5">
+                            <span class="inline-block px-3 py-1 bg-orange-50 border border-orange-200 text-orange-800 text-[11px] font-bold uppercase rounded-full mb-2">Fórmula Sinergia</span>
+                            <h3 class="font-bold text-lg sm:text-xl text-brand-dark mb-1 group-hover:text-brand-accent transition-colors">VITA C Complex</h3>
+                            <p class="text-xs sm:text-sm text-gray-500 font-light">Estimula la absorción del colágeno y previene el envejecimiento oxidativo.</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/51940199690?text=Hola,%20deseo%20llevar%20el%20producto%20VITA%20C%20Complex.%20¿Hacen%20delivery?" target="_blank" class="w-full py-3.5 px-3 rounded-2xl sm:rounded-full bg-brand-whatsapp hover:bg-[#1eb956] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(37,211,102,0.35)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.5)] transition-all duration-300 transform active:scale-95 text-center leading-tight">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp shrink-0" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+                        <span>Deseo llevar el producto ¿hacen delivery?</span>
+                    </a>
+                </div>
+
+                <!-- 4. MAGNESIO COMPLEX (AZUL) -->
+                <div class="bg-white rounded-3xl p-4 sm:p-5 border border-gray-200 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-2 reveal" style="transition-delay: 0.3s;">
+                    <div>
+                        <div class="overflow-hidden rounded-2xl bg-[#fafafa] border border-gray-100 p-2 mb-4 relative flex items-center justify-center">
+                            <img src="./medio/img/Magnesio%20Complex.png" alt="Magnesio Complex CQPharma" class="w-full h-auto object-contain rounded-xl group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        </div>
+                        <div class="text-center mb-5">
+                            <span class="inline-block px-3 py-1 bg-blue-50 border border-blue-200 text-blue-800 text-[11px] font-bold uppercase rounded-full mb-2">Relajación & Sueño</span>
+                            <h3 class="font-bold text-lg sm:text-xl text-brand-dark mb-1 group-hover:text-brand-accent transition-colors">Magnesio Complex</h3>
+                            <p class="text-xs sm:text-sm text-gray-500 font-light">Contribuye al buen funcionamiento neuromuscular y combate el cansancio.</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/51940199690?text=Hola,%20deseo%20llevar%20el%20producto%20Magnesio%20Complex.%20¿Hacen%20delivery?" target="_blank" class="w-full py-3.5 px-3 rounded-2xl sm:rounded-full bg-brand-whatsapp hover:bg-[#1eb956] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(37,211,102,0.35)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.5)] transition-all duration-300 transform active:scale-95 text-center leading-tight">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp shrink-0" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+                        <span>Deseo llevar el producto ¿hacen delivery?</span>
+                    </a>
+                </div>
+
+                <!-- 5. MAGNESIO COMPLEX MG (ROJO) -->
+                <div class="bg-white rounded-3xl p-4 sm:p-5 border border-gray-200 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-2 reveal">
+                    <div>
+                        <div class="overflow-hidden rounded-2xl bg-[#fafafa] border border-gray-100 p-2 mb-4 relative flex items-center justify-center">
+                            <img src="./medio/img/Magnesio%20Complex%20MG.png" alt="Magnesio Complex MG Forte CQPharma" class="w-full h-auto object-contain rounded-xl group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        </div>
+                        <div class="text-center mb-5">
+                            <span class="inline-block px-3 py-1 bg-red-50 border border-red-200 text-red-800 text-[11px] font-bold uppercase rounded-full mb-2">Anti-Calambres Forte</span>
+                            <h3 class="font-bold text-lg sm:text-xl text-brand-dark mb-1 group-hover:text-brand-accent transition-colors">Magnesio Complex Mg</h3>
+                            <p class="text-xs sm:text-sm text-gray-500 font-light">Doble acción contra contracturas, fatiga muscular y desgaste severo.</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/51940199690?text=Hola,%20deseo%20llevar%20el%20producto%20Magnesio%20Complex%20MG.%20¿Hacen%20delivery?" target="_blank" class="w-full py-3.5 px-3 rounded-2xl sm:rounded-full bg-brand-whatsapp hover:bg-[#1eb956] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(37,211,102,0.35)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.5)] transition-all duration-300 transform active:scale-95 text-center leading-tight">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp shrink-0" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+                        <span>Deseo llevar el producto ¿hacen delivery?</span>
+                    </a>
+                </div>
+
+                <!-- 6. COMPLEJO B -->
+                <div class="bg-white rounded-3xl p-4 sm:p-5 border border-gray-200 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-2 reveal" style="transition-delay: 0.1s;">
+                    <div>
+                        <div class="overflow-hidden rounded-2xl bg-[#fafafa] border border-gray-100 p-2 mb-4 relative flex items-center justify-center">
+                            <img src="./medio/img/Complejo%20B.png" alt="Complejo B CQPharma" class="w-full h-auto object-contain rounded-xl group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        </div>
+                        <div class="text-center mb-5">
+                            <span class="inline-block px-3 py-1 bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-bold uppercase rounded-full mb-2">Energía & Concentración</span>
+                            <h3 class="font-bold text-lg sm:text-xl text-brand-dark mb-1 group-hover:text-brand-accent transition-colors">Complejo B</h3>
+                            <p class="text-xs sm:text-sm text-gray-500 font-light">Revitalización integral del sistema nervioso, vitalidad y energía diaria.</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/51940199690?text=Hola,%20deseo%20llevar%20el%20producto%20Complejo%20B.%20¿Hacen%20delivery?" target="_blank" class="w-full py-3.5 px-3 rounded-2xl sm:rounded-full bg-brand-whatsapp hover:bg-[#1eb956] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(37,211,102,0.35)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.5)] transition-all duration-300 transform active:scale-95 text-center leading-tight">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp shrink-0" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+                        <span>Deseo llevar el producto ¿hacen delivery?</span>
+                    </a>
+                </div>
+
+                <!-- 7. CALCIO COMPLEX -->
+                <div class="bg-white rounded-3xl p-4 sm:p-5 border border-gray-200 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-2 reveal" style="transition-delay: 0.2s;">
+                    <div>
+                        <div class="overflow-hidden rounded-2xl bg-[#fafafa] border border-gray-100 p-2 mb-4 relative flex items-center justify-center">
+                            <img src="./medio/img/Calcio%20Complex.png" alt="Calcio Complex Ca CQPharma" class="w-full h-auto object-contain rounded-xl group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        </div>
+                        <div class="text-center mb-5">
+                            <span class="inline-block px-3 py-1 bg-rose-50 border border-rose-200 text-rose-800 text-[11px] font-bold uppercase rounded-full mb-2">Densidad Ósea & Fuerza</span>
+                            <h3 class="font-bold text-lg sm:text-xl text-brand-dark mb-1 group-hover:text-brand-accent transition-colors">Calcio Complex (Ca)</h3>
+                            <p class="text-xs sm:text-sm text-gray-500 font-light">Fortalecimiento de huesos, dientes y articulaciones contra el desgaste.</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/51940199690?text=Hola,%20deseo%20llevar%20el%20producto%20Calcio%20Complex.%20¿Hacen%20delivery?" target="_blank" class="w-full py-3.5 px-3 rounded-2xl sm:rounded-full bg-brand-whatsapp hover:bg-[#1eb956] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(37,211,102,0.35)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.5)] transition-all duration-300 transform active:scale-95 text-center leading-tight">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp shrink-0" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+                        <span>Deseo llevar el producto ¿hacen delivery?</span>
+                    </a>
+                </div>
+
+                <!-- 8. TARJETA DE ASESORÍA PERSONALIZADA -->
+                <div class="bg-gradient-to-br from-brand-dark via-[#163f7f] to-brand-dark rounded-3xl p-6 text-white text-center flex flex-col justify-between shadow-xl border border-brand-gold/30 reveal group hover:-translate-y-2 transition-all duration-300" style="transition-delay: 0.3s;">
+                    <div>
+                        <div class="w-16 h-16 mx-auto rounded-2xl bg-white/10 flex items-center justify-center text-brand-gold mb-4 mt-2 border border-white/10">
+                            <i data-lucide="help-circle" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2 text-white font-serif">¿Buscas otro producto?</h3>
+                        <p class="text-xs sm:text-sm text-gray-200 font-light mb-6 leading-relaxed">
+                            Contamos con toda la línea farmacéutica de CQPharma. Escríbenos y te cotizamos el producto exacto con delivery.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/51940199690?text=Hola,%20deseo%20llevar%20un%20producto%20especial%20¿hacen%20delivery?" target="_blank" class="w-full py-3.5 px-4 rounded-2xl sm:rounded-full bg-brand-accent hover:bg-brand-gold hover:text-brand-dark text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg transition-all duration-300 transform active:scale-95 text-center">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>Consultar por WhatsApp</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: CATÁLOGO OFICIAL CQPHARMA (PDF EMBEBIDO + OPTIMIZADO PARA MÓVILES) -->
+    <section class="py-16 lg:py-24 bg-brand-light relative overflow-hidden" id="catalogo">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-8 lg:mb-12 reveal">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-dark text-brand-gold font-bold text-xs sm:text-sm uppercase tracking-widest mb-3 shadow-md">
+                    <i data-lucide="book-open" class="w-4 h-4"></i> Catálogo Completo
+                </span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-3">Catálogo Portugal CQPharma</h2>
+                <p class="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto">
+                    Explora toda la ficha técnica, certificaciones y catálogo completo en formato digital interactivo.
+                </p>
+            </div>
+
+            <!-- Botones de Acción Móvil Prioritarios (Visibles y cómodos para tocar con el pulgar) -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-6 reveal">
+                <a href="catalogoportugal.pdf" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-brand-accent text-white font-bold text-sm sm:text-base flex items-center justify-center gap-2.5 shadow-lg hover:bg-brand-dark hover:scale-105 active:scale-95 transition-all">
+                    <i data-lucide="maximize-2" class="w-4 h-4"></i>
+                    <span>Ver en Pantalla Completa</span>
+                </a>
+                <a href="catalogoportugal.pdf" download="Catalogo-CQPharma-Portugal.pdf" class="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-white border-2 border-brand-dark text-brand-dark font-bold text-sm sm:text-base flex items-center justify-center gap-2.5 shadow-md hover:bg-brand-dark hover:text-white active:scale-95 transition-all">
+                    <i data-lucide="download" class="w-4 h-4"></i>
+                    <span>Descargar Catálogo (PDF)</span>
+                </a>
+                <a href="https://wa.me/51940199690?text=Hola,%20revisé%20el%20catálogo%20Portugal%20y%20deseo%20consultar%20precios%20y%20delivery" target="_blank" class="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-brand-whatsapp text-white font-bold text-sm sm:text-base flex items-center justify-center gap-2.5 shadow-lg hover:bg-[#1eb956] active:scale-95 transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-whatsapp shrink-0" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+                    <span>Pedir por WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Contenedor del Visor de PDF -->
+            <div class="bg-white p-2 sm:p-4 rounded-3xl lg:rounded-[2.5rem] shadow-2xl border border-brand-gold/30 reveal overflow-hidden">
+                <!-- Barra superior simulada del visor -->
+                <div class="flex items-center justify-between px-3 py-2 bg-gray-50 rounded-2xl mb-2 text-xs font-semibold text-gray-500 border border-gray-100">
+                    <span class="flex items-center gap-2 truncate">
+                        <i data-lucide="file-check-2" class="w-4 h-4 text-brand-dark"></i>
+                        catalogoportugal.pdf
+                    </span>
+                    <span class="text-[11px] bg-brand-light px-2.5 py-1 rounded-full text-brand-dark font-mono">PDF Oficial</span>
+                </div>
+
+                <!-- Marco para visualizar el PDF -->
+                <div class="relative w-full h-[65vh] sm:h-[75vh] md:h-[820px] rounded-2xl overflow-hidden bg-gray-100 border border-gray-200">
+                    <object data="catalogoportugal.pdf#toolbar=1&navpanes=0&scrollbar=1" type="application/pdf" class="w-full h-full">
+                        <!-- Fallback amigable si el navegador móvil no soporta incrustación directa -->
+                        <div class="w-full h-full flex flex-col items-center justify-center p-6 text-center bg-white space-y-4">
+                            <div class="w-16 h-16 rounded-full bg-brand-accent/10 flex items-center justify-center text-brand-accent">
+                                <i data-lucide="file-text" class="w-8 h-8"></i>
+                            </div>
+                            <h4 class="font-bold text-lg text-brand-dark">Catálogo Listo para Visualizar</h4>
+                            <p class="text-xs sm:text-sm text-gray-500 max-w-sm">
+                                Tu dispositivo móvil te ofrece una mejor experiencia abriendo el catálogo a pantalla completa:
+                            </p>
+                            <a href="catalogoportugal.pdf" target="_blank" class="px-8 py-3.5 rounded-full bg-brand-accent text-white font-bold text-sm shadow-md hover:scale-105 transition-transform flex items-center gap-2">
+                                <i data-lucide="eye" class="w-4 h-4"></i> Abrir Catálogo Completo
+                            </a>
+                        </div>
+                    </object>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparativa -->
+    <section class="py-16 lg:py-24 bg-brand-surface" id="comparacion">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+            <div class="text-center mb-10 lg:mb-12">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-4">La diferencia está en la fórmula</h2>
+                <p class="text-gray-500 text-sm sm:text-base">Compara y descubre por qué somos los número 1.</p>
+            </div>
+            
+            <div class="overflow-hidden rounded-2xl lg:rounded-[2rem] border border-gray-200 shadow-xl lg:shadow-2xl bg-white relative">
+                <div class="absolute top-0 left-0 min-w-full h-1 bg-gradient-to-r from-brand-gold via-brand-accent to-brand-gold z-10"></div>
+                
+                <div class="overflow-x-auto w-full">
+                    <table class="w-full text-left border-collapse min-w-[500px]">
+                        <thead>
+                            <tr class="bg-brand-light border-b-2 border-gray-200">
+                                <th class="p-5 sm:p-6 font-bold text-brand-dark text-sm sm:text-lg">Beneficios</th>
+                                <th class="p-5 sm:p-6 text-center bg-brand-dark text-brand-gold font-bold text-base sm:text-xl w-1/3 shadow-inner">Kolflex Premium</th>
+                                <th class="p-5 sm:p-6 text-center text-gray-500 font-semibold text-sm sm:text-base w-1/3">Colágeno Tradicional</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm sm:text-base">
+                            <tr class="border-b border-gray-100 hover:bg-brand-light/50 transition-colors">
+                                <td class="p-5 md:p-6 font-medium text-brand-text">Colágeno Hidrolizado</td>
+                                <td class="p-5 md:p-6 bg-brand-dark/5 text-center"><i data-lucide="check-circle-2" class="w-7 h-7 text-brand-success mx-auto drop-shadow-sm"></i></td>
+                                <td class="p-5 md:p-6 text-center"><i data-lucide="x" class="w-6 h-6 text-red-400 mx-auto"></i></td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-brand-light/50 transition-colors">
+                                <td class="p-5 md:p-6 font-medium text-brand-text">Añadido de Cúrcuma Activa</td>
+                                <td class="p-5 md:p-6 bg-brand-dark/5 text-center"><i data-lucide="check-circle-2" class="w-7 h-7 text-brand-success mx-auto drop-shadow-sm"></i></td>
+                                <td class="p-5 md:p-6 text-center"><i data-lucide="x" class="w-6 h-6 text-red-400 mx-auto"></i></td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-brand-light/50 transition-colors">
+                                <td class="p-5 md:p-6 font-medium text-brand-text">Glucosamina Integrada</td>
+                                <td class="p-5 md:p-6 bg-brand-dark/5 text-center"><i data-lucide="check-circle-2" class="w-7 h-7 text-brand-success mx-auto drop-shadow-sm"></i></td>
+                                <td class="p-5 md:p-6 text-center"><i data-lucide="x" class="w-6 h-6 text-red-400 mx-auto"></i></td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-brand-light/50 transition-colors">
+                                <td class="p-5 md:p-6 font-medium text-brand-text">Magnesio y Vitamina C</td>
+                                <td class="p-5 md:p-6 bg-brand-dark/5 text-center"><i data-lucide="check-circle-2" class="w-7 h-7 text-brand-success mx-auto drop-shadow-sm"></i></td>
+                                <td class="p-5 md:p-6 text-center"><i data-lucide="check" class="w-6 h-6 text-gray-300 mx-auto"></i></td>
+                            </tr>
+                            <tr class="hover:bg-brand-light/50 transition-colors">
+                                <td class="p-5 md:p-6 font-medium text-brand-text">Soporte Completo (Dolor + Piel)</td>
+                                <td class="p-5 md:p-6 bg-brand-dark/5 text-center"><i data-lucide="check-circle-2" class="w-7 h-7 text-brand-success mx-auto drop-shadow-sm"></i></td>
+                                <td class="p-5 md:p-6 text-center"><i data-lucide="check" class="w-6 h-6 text-gray-300 mx-auto"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Asesoría y Dudas -->
+    <section class="py-20 lg:py-32 bg-brand-dark text-white relative overflow-hidden reveal">
+        <div class="absolute inset-0 z-0 opacity-40">
+             <div class="absolute top-0 right-0 w-[40rem] h-[40rem] bg-brand-accent rounded-full blur-[120px] animate-blob"></div>
+             <div class="absolute bottom-0 left-0 w-[40rem] h-[40rem] bg-brand-gold rounded-full blur-[120px] animate-blob animation-delay-4000"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-6xl font-serif mb-6 lg:mb-8 text-white leading-tight drop-shadow-lg">¿Aún tienes dudas o prefieres <br class="hidden sm:block"><span class="text-gradient-gold italic">atención humana?</span></h2>
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-10 lg:mb-12 max-w-3xl mx-auto font-light leading-relaxed">Nuestro equipo de asesores de salud en Perú está listo en WhatsApp para responder tus preguntas o tomar tu pedido en minutos. <strong class="text-white">¡Sin bots, solo personas ayudando a personas!</strong></p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 w-full max-w-md sm:max-w-none mx-auto">
+                <a href="https://wa.me/51940199690?text=Hola,%20quiero%20hacer%20un%20pedido%20de%20Kolflex" target="_blank" class="bg-brand-whatsapp hover:bg-[#1fba58] text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-lg sm:text-xl transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(37,211,102,0.4)] sm:shadow-[0_0_30px_rgba(37,211,102,0.6)] flex items-center justify-center gap-3 border border-[#2ceb74] w-full sm:w-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+                    Comprar por WhatsApp
+                </a>
+                <a href="https://wa.me/51940199690?text=Hola,%20tengo%20unas%20dudas%20sobre%20Kolflex" target="_blank" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-lg sm:text-xl transition-all flex items-center justify-center gap-3 backdrop-blur-md w-full sm:w-auto">
+                    <i data-lucide="message-circle" class="w-5 h-5 sm:w-6 sm:h-6"></i> Solo tengo dudas
+                </a>
+            </div>
+            <p class="text-xs sm:text-sm text-brand-gold mt-8 lg:mt-10 uppercase tracking-widest font-bold"><i data-lucide="clock" class="w-3 h-3 sm:w-4 sm:h-4 inline pb-0.5"></i> Respuesta Inmediata (L-V 9am a 6pm)</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-16 pb-8 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
+                <div class="flex items-center gap-4">
+                    <img src="./medio/img/cqpharmalogo.png" alt="CQPharma Logo" class="h-12 w-auto object-contain mix-blend-multiply">
+                    <span class="font-serif text-2xl font-bold text-brand-dark tracking-wide uppercase border-l border-gray-300 pl-4">Kolflex</span>
+                </div>
+                <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-500 font-semibold uppercase tracking-wider">
+                    <a href="#" class="hover:text-brand-accent transition-colors">Nosotros</a>
+                    <a href="#faq" class="hover:text-brand-accent transition-colors">FAQ</a>
+                    <a href="#" class="hover:text-brand-accent transition-colors">Contacto</a>
+                    <a href="#" class="hover:text-brand-accent transition-colors">Envíos</a>
+                    <a href="#" class="hover:text-brand-accent transition-colors">Privacidad</a>
+                </div>
+                <div class="flex gap-4 text-brand-dark">
+                    <div class="w-12 h-12 border-2 border-brand-gold/30 bg-brand-light rounded-full flex items-center justify-center text-xs font-bold shadow-sm">GMP</div>
+                    <div class="w-12 h-12 border-2 border-brand-gold/30 bg-brand-light rounded-full flex items-center justify-center text-xs font-bold text-center leading-tight shadow-sm">100%<br>NAT</div>
+                    <div class="w-12 h-12 border-2 border-brand-gold/30 bg-brand-light rounded-full flex items-center justify-center text-xs font-bold shadow-sm">LAB</div>
+                </div>
+            </div>
+            <div class="text-center text-sm text-gray-400 font-medium">
+                &copy; 2026 KOLFLEX / CQPharma. Diseñado para el bienestar. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <div class="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50 group">
+        <div class="absolute inset-0 bg-brand-whatsapp rounded-full animate-ping opacity-75"></div>
+        <a href="https://wa.me/51940199690?text=Hola,%20me%20interesa%20la%20oferta%20de%20Kolflex" target="_blank" class="relative bg-brand-whatsapp text-white p-4 sm:p-5 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 flex items-center justify-center" aria-label="Contactar por WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-whatsapp sm:w-8 sm:h-8" viewBox="0 0 16 16">
+                <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+            </svg>
+        </a>
+        <div class="hidden sm:block absolute right-[4rem] sm:right-[5rem] bottom-4 bg-white text-brand-dark px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold shadow-2xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none after:content-[''] after:absolute after:top-1/2 after:-right-2 after:-translate-y-1/2 after:border-l-[10px] after:border-l-white after:border-y-8 after:border-y-transparent">
+            ¡Escríbenos aquí!
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
